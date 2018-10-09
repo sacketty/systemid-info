@@ -19,10 +19,10 @@ plugins:
 - jemoji
 
 # Site settings
-url: 'https://mydomain.com'
+url: 'https://www.system-id.com'
 baseurl: ''
-title: 'My website'
-description: 'This is my new website'
+title: 'System ID'
+description: 'Identification vault platform'
 permalink: pretty
 logo: "https://www.gravatar.com/avatar/490ba026886bfeee4376d1a2c1573991?s=52"
 
@@ -33,6 +33,7 @@ paginate_path: blog/page:num
 # Header nav
 navigation_header:
   Home: /
+  Use cases: /use_cases/
   About: /about/
   Blog: /blog/
 
