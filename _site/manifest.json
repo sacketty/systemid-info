@@ -1,0 +1,15 @@
+{
+  "lang": "en-US",
+  "name": "My website",
+  "short_name": "Mywebsite",
+  "theme_color": "#24292e",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://www.gravatar.com/avatar/490ba026886bfeee4376d1a2c1573991?s=52",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}
