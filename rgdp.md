@@ -2,6 +2,7 @@
 layout: post
 title: rgdp
 excerpt: Privacy Policy - Terms of Service
+feature_text: Tous droits réservés - 23 novembre 2018
 ---
 <h1 >POLITIQUE DE CONFIDENTIALITÉ ET D'UTILISATION DES DONNÉES PERSONNELLES</h1>	<div class="row">
 
