@@ -10,7 +10,7 @@
     
       <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>System ID | Identification vault platform</title>
-<meta name="generator" content="Jekyll v3.8.4" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="System ID" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="System ID allows you to store you identity document in a central place for future use with platformms requirering high level of identification. Your personal information will never be discosed without your full permission." />
@@ -174,18 +174,52 @@ applyToggle('.list--nav', '.button', 640)
     <p>SystemID as a multi-purpose Automatic identification system. It also provides a free and secure Digital Signature for you. You upload your identity documents only once for all. 
 Your identity and personal information may only be discloded to our clients platforms after your fully signed agreement.</p>
 
-<p><a class="button" href="https://github.com/daviddarnes/alembic" style="background: #0366d6">Fork it  <svg width="16" height="16" class="icon  icon--github" role="img" alt="github"><title>github</title>
+<p><a class="button" href="https://s3.amazonaws.com/system-id/system-id.v1.0.apk" style="background: #0366d6">Download the Android app  <svg width="16" height="16" class="icon  icon--github" role="img" alt="github"><title>github</title>
 <use xlink:href="#github" fill="CurrentColor"></use></svg>
-</a>
- <a class="button" href="https://twitter.com/intent/tweet/?url=https://alembic.darn.es&amp;text=Alembic%20-%20A%20Jekyll%20boilerplate%20theme&amp;via=DavidDarnes" style="background: #0d94e7">Tweet it  <svg width="16" height="16" class="icon  icon--twitter" role="img" alt="twitter"><title>twitter</title>
-<use xlink:href="#twitter" fill="CurrentColor"></use></svg>
-</a>
- <a class="button" href="https://github.com/daviddarnes/alembic#installation">Install Alembic ⚗️</a>
- <a class="button" href="https://www.paypal.me/daviddarnes/5usd" style="background: #333333">Tip me $5 💸</a></p>
+</a></p>
+<figure class="figure  figure--center">
+  <img class="image" src="/assets/img/system-id.v1.apk.png" alt="System-ID apk QR Code" width="" height="">
+  <figcaption class="caption">System-ID apk QR Code</figcaption>
+</figure>
 
-<h2 id="how-does-it-work">How does it Work</h2>
+<h1 id="how-does-it-work">How does it Work</h1>
+
+<h2 id="for-the-enduser">For the EndUser</h2>
 
 <ul>
+  <li>Download the SystemId app (Download link will be available soon)</li>
+  <li>The main identification key is <strong>Your phone number</strong>
+</li>
+  <li>Complete the  SMS based identification process</li>
+  <li>Scan your identity documents</li>
+  <li>Confirm field extracted from the Identification documents submitted</li>
+  <li>And Voila !</li>
+</ul>
+
+<h2 id="for-the-web-application-developper">For the Web Application developper</h2>
+
+<ul>
+  <li>Web application registered in the platform receives
+    <ol>
+      <li>a unique code ex: ‘precious-cargo-2564’</li>
+      <li>a private (and secret) apikey to connect to the system-id api at <a href="https://api.system-id.com">https://api.system-id.com</a>
+</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="secured-login">Secured Login</h3>
+<ul>
+  <li>Web app server generates a pseudo-random unique tokenId ex: ‘f5338d36-23e9-4080-af6f-4acda8529815’</li>
+  <li>this uuid is used to generate an QR code in the form: “sid://<web-app-code>/login?tokenId=<tokenid>"
+ex: sid://precious-cargo-2564/login?tokenId=f5338d36-23e9-4080-af6f-4acda8529815</tokenid></web-app-code>
+</li>
+  <li>The corresponding QR code is show in the login page so the enduser can scan it with the System-ID android Application</li>
+  <li>A check button is provided on the login page to generate a server based check at http://api.system-id/com/users/authenticate?tokenId=<tokenid></tokenid>
+</li>
+  <li>
+    <p>in case of authorized connection, the the link above returns a JWT token tha can be decoded to receive basic user information.</p>
+  </li>
   <li>Available as a <strong>theme gem</strong> and <strong>GitHub Pages</strong> theme</li>
   <li>Simple and elegant design that can be used out of the box or as solid starting point</li>
   <li>Tested in all major browsers, including <strong>IE and Edge</strong>

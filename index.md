@@ -10,9 +10,32 @@ excerpt: "System ID allows you to store you identity document in a central place
 SystemID as a multi-purpose Automatic identification system. It also provides a free and secure Digital Signature for you. You upload your identity documents only once for all. 
 Your identity and personal information may only be discloded to our clients platforms after your fully signed agreement.
 
-{% include button.html text="Fork it" icon="github" link="https://github.com/daviddarnes/alembic" color="#0366d6" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/intent/tweet/?url=https://alembic.darn.es&text=Alembic%20-%20A%20Jekyll%20boilerplate%20theme&via=DavidDarnes" color="#0d94e7" %} {% include button.html text="Install Alembic ⚗️" link="https://github.com/daviddarnes/alembic#installation" %} {% include button.html text="Tip me $5 💸" link="https://www.paypal.me/daviddarnes/5usd" color="#333333" %}
+{% include button.html text="Download the Android app" icon="github" link="https://s3.amazonaws.com/system-id/system-id.v1.0.apk" color="#0366d6" %} {% include figure.html image="/assets/img/system-id.v1.apk.png" caption="System-ID apk QR Code" %}
 
-## How does it Work
+# How does it Work
+
+## For the EndUser
+
+- Download the SystemId app (Download link will be available soon)
+- The main identification key is **Your phone number**
+- Complete the  SMS based identification process 
+- Scan your identity documents
+- Confirm field extracted from the Identification documents submitted
+- And Voila !
+
+## For the Web Application developper
+
+- Web application registered in the platform receives
+1. a unique code ex: 'precious-cargo-2564'
+2. a private (and secret) apikey to connect to the system-id api at [https://api.system-id.com](https://api.system-id.com)
+
+### Secured Login
+- Web app server generates a pseudo-random unique tokenId ex: 'f5338d36-23e9-4080-af6f-4acda8529815'
+- this uuid is used to generate an QR code in the form: "sid://<web-app-code>/login?tokenId=<tokenId>"
+ex: sid://precious-cargo-2564/login?tokenId=f5338d36-23e9-4080-af6f-4acda8529815
+- The corresponding QR code is show in the login page so the enduser can scan it with the System-ID android Application
+- A check button is provided on the login page to generate a server based check at http://api.system-id/com/users/authenticate?tokenId=<tokenId>
+- in case of authorized connection, the the link above returns a JWT token tha can be decoded to receive basic user information.
 
 - Available as a **theme gem** and **GitHub Pages** theme
 - Simple and elegant design that can be used out of the box or as solid starting point
