@@ -10,7 +10,7 @@ excerpt: "System ID allows you to store you identity document in a central place
 SystemID as a multi-purpose Automatic identification system. It also provides a free and secure Digital Signature for you. You upload your identity documents only once for all. 
 Your identity and personal information may only be discloded to our clients platforms after your fully signed agreement.
 
-{% include button.html text="Download the Android app" icon="github" link="https://s3.amazonaws.com/system-id/system-id.v1.0.apk" color="#0366d6" %} {% include figure.html image="/assets/img/system-id.v1.apk.png" caption="System-ID apk QR Code" %}
+[![Download Android app](/assets/img/google-play-badge.png){:height="646px" width="250px"}](https://play.google.com/store/apps/details?id=com.brentsys.systemid.idverifier)
 
 # How does it Work
 
