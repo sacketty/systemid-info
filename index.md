@@ -25,6 +25,9 @@ Your identity and personal information may only be discloded to our clients plat
 
 ## For the Web Application developper
 
+> Note: Before you can use the API, make sure you have submitted your full identification documents via the mobile application. Otherwise access will be declined.
+
+
 - Log-in to [https://api.system-id.com/](https://api.system-id.com/)
 Log-in to [https://api.system-id.com/](https://api.system-id.com/).
 The homepage shows you different service plans that you can use for your webapp. Each plan consists in bunch of user profile information required by your application.
